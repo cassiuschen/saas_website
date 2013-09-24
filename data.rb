@@ -5,6 +5,9 @@ $file_url = {
 	"debian" => "http://mirrors.thecmw.cn/debian",
 	"ruby" => "http://rubygems.bdfzer.com",
 	"dev" => "dev.html",
+	"jsroot" => "../js/",
+	"cssroot" => "../css/",
+	"svgroot" => "../svg/",
 	"cloud" => "http://cloud.thecmw.cn"
 }
 
