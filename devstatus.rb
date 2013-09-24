@@ -16,11 +16,7 @@ end
 contain = Array.new()
 open("dev.txt"){|file|
 	while text = file.gets 
-		p file.gets
 		contain = text.split()
-		contain.each{|i|
-			puts i,"\n"
-		}
 		while input = contain.shift
 			puts input, "\n"
 			printtable(input)
