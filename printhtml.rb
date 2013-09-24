@@ -16,18 +16,18 @@ def printfooter
 end
 
 def printtitle
-	puts '<title>', $website_info.title , '</title>'
+	puts '<title>', $website_info["title"] , '</title>'
 end
 
 def linkcss
 	$cssname.each{|name|
-		puts '<link rel="stylesheet" href="', $website_info.cssroot , name , '.css">' , "\n"
+		puts '<link rel="stylesheet" href="', $website_info["cssroot"] , name , '.css">' , "\n"
 	}
 end
 
 def linkjs
 	$jsname.each{|name|
-		puts '<script src="', $website_info.jsroot , name , '.js"></script>' , "\n"
+		puts '<script src="', $website_info["jsroot"] , name , '.js"></script>' , "\n"
 	}
 end
 
