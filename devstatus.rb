@@ -16,6 +16,7 @@ file = open(filename)
 while text = file.gets 
 	contain = %w(text)
 	while input = contain.shift
+		print input,'-'
 		printtable(input)
 	end
 end
