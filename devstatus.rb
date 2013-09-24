@@ -11,13 +11,23 @@ def printtable(element)
 	end
 end
 
-filename = "dev.txt"
-file = open(filename)
-while text = file.gets 
-	contain = %w(text)
-	while input = contain.shift
-		print input,'-'
-		printtable(input)
+#filename = "dev.txt"
+#file = open("dev.txt")
+open("dev.txt"){|file|
+	while text = file.gets 
+		contain = %w(text)
+		while input = contain.shift
+			print input,'-'
+			printtable(input)
+		end
 	end
-end
+}
 
+#while text = file.gets 
+#	contain = %w(text)
+#	while input = contain.shift
+#		print input,'-'
+#		printtable(input)
+#	end
+#end
+#file.close
