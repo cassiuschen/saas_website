@@ -8,6 +8,12 @@ $file_url = {
 	"cloud" => "http://cloud.thecmw.cn"
 }
 
+$nav_info = {
+	"开源镜像站" => "mirrors.html",
+	"开发者测试平台" => "dev.html",
+	"创媒云端" => "http://cloud.thecmw.cn"
+}
+
 $saas_production = {
 	"bdfzer" => "http://bdfzer.com",
 	"chat" => "http://chat.saas.bdfzer.com",
@@ -18,7 +24,9 @@ $website_info = {
 	"title" => "SaaS",
 	"jsroot" => "../js",
 	"cssroot" => "../css",
-	"svgroot" => "../svg"
+	"svgroot" => "../svg",
+	"building_number" => "7",
+	"running_number" => "3"
 }
 
 $cssname = ["docs","highlight","style","uikit.docs.min"]

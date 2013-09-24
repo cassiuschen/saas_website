@@ -5,9 +5,12 @@ require "./printhtml.rb"
 #Install index.html
 
 printheader
-puts '<body>'
+puts '<body class="tm-background">'
+printnavbar
+print_index_body
 
 puts '</body>'
+puts '</html>'
 
 
 

@@ -42,6 +42,19 @@ def printheader
 	puts '</head>'
 end
 
+def printnavbar
+	puts '<nav class="tm-navbar uk-navbar uk-navbar-attached"><div class="uk-container uk-container-center"><a class="uk-navbar-brand uk-hidden-small" href="', $file_url["index"], '"><img class="uk-margin uk-margin-remove" src="../svg/logo_uikit.svg" width="90" height="30" title="SaaS" alt="SaaS"></a>'
+	puts '<ul class="uk-navbar-nav uk-hidden-small">'
+	navbartip = $nav_info.keys
+	navbartip.each {|key|
+		puts '<li><a href="', $nav_info["key"], '">', key , '</a></li>'
+	}
+	puts '</ul>','<a href="#tm-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a><div class="uk-navbar-brand uk-navbar-center uk-visible-small"><img src="', $file_url["svgroot"],'/logo_uikit.svg" width="90" height="30" title="SaaS" alt="SaaS"></div></div></nav>'
+end
+
+def print_index_body
+	puts '<div class="tm-section tm-section-color-1 tm-section-colored"><div class="uk-container uk-container-center uk-text-center"><img class="tm-logo" src="', $file_url["svgroot"],'/logo_uikit_large_csaas.svg" width="281" height="217" title="SaaS" alt="SaaS"><p class="uk-text-large">来自 创媒云端<br class="uk-hidden-small"> 服务于开发者与孵化器的软件即服务开发平台</p><a class="uk-button tm-button-download" href="',$file_url["dev"],'">进入开发者测试平台</a><ul class="tm-subnav uk-subnav"><li><a href="',$file_url["mirrors"],'">开源镜像站</a></li><li><a href="',$file_url["cloud"],'">去往创媒云端</a></li></ul><ul class="tm-subnav uk-subnav"><li><a><i class="uk-icon-star"></i> <span>',$website_info["building_number"],'</span> 个测试项目</a></li><li><a><i class="uk-icon-code-fork"></i> <span>',$website_info["running_number"],'</span> 个已公布</a></li></ul></div></div>'
+end
 
 
 
