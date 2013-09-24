@@ -11,8 +11,6 @@ def printtable(element)
 	end
 end
 
-#filename = "dev.txt"
-#file = open("dev.txt")
 contain = Array.new()
 open("dev.txt"){|file|
 	while text = file.gets 
@@ -22,12 +20,3 @@ open("dev.txt"){|file|
 		end
 	end
 }
-
-#while text = file.gets 
-#	contain = %w(text)
-#	while input = contain.shift
-#		print input,'-'
-#		printtable(input)
-#	end
-#end
-#file.close
