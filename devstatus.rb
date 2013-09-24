@@ -1,4 +1,4 @@
-filename = dev.txt
+filename = "dev.txt"
 file = open(filename)
 while text = file.gets |
 	contain = %w(text)
