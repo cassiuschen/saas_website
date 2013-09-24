@@ -1,12 +1,3 @@
-filename = "dev.txt"
-file = open(filename)
-while text = file.gets 
-	contain = %w(text)
-	while input = contain.shift
-		printtable(input)
-	end
-end
-
 def printtable(element)
 	case element
 	when "T","t","ok","running","true"
@@ -19,3 +10,13 @@ def printtable(element)
 		print '<td>' , element , '</td>'		
 	end
 end
+
+filename = "dev.txt"
+file = open(filename)
+while text = file.gets 
+	contain = %w(text)
+	while input = contain.shift
+		printtable(input)
+	end
+end
+
