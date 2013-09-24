@@ -1,10 +1,14 @@
 #Load
-require "data.rb"
-require "printhtml.rb"
+require "./data.rb"
+require "./printhtml.rb"
 
 #Install index.html
 
 printheader
+puts '<body>'
+
+puts '</body>'
+
 
 
 #Install dev.html
