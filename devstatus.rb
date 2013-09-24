@@ -1,6 +1,6 @@
 filename = "dev.txt"
 file = open(filename)
-while text = file.gets |
+while text = file.gets 
 	contain = %w(text)
 	while input = contain.shift
 		printtable(input)
