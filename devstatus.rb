@@ -16,12 +16,13 @@ end
 contain = Array.new()
 open("dev.txt"){|file|
 	while text = file.gets 
+		p file.gets
 		contain = %w(text)
 		contain.each{|i|
-			puts i,"/n"
+			puts i,"\n"
 		}
 		while input = contain.shift
-			puts input, "/n"
+			puts input, "\n"
 			printtable(input)
 		end
 	end
