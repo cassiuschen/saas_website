@@ -17,7 +17,7 @@ contain = Array.new()
 open("dev.txt"){|file|
 	while text = file.gets 
 		p file.gets
-		contain = %w(text)
+		contain = %w(file.gets)
 		contain.each{|i|
 			puts i,"\n"
 		}
