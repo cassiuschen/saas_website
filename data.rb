@@ -18,9 +18,9 @@ $nav_info = {
 }
 
 $saas_production = {
-	"bdfzer" => "http://bdfzer.com",
-	"chat" => "http://chat.saas.bdfzer.com",
-	"cmj" => "http://media.pkuschool.edu.cn"
+	"北附人BDFZer" => "http://bdfzer.com",
+	"水楼Dev" => "http://chat.saas.bdfzer.com",
+	"北大附中传媒节网站" => "http://media.pkuschool.edu.cn"
 }
 
 $website_info = {
@@ -32,5 +32,6 @@ $website_info = {
 	"running_number" => "3"
 }
 
-$cssname = ["docs","highlight","uikit.docs.min"]
-$jsname = ["docs","highlight","jquery","uikit.min"]
+$cssname = ["uikit.docs.min","docs","highlight",]
+$jsname = ["highlight","jquery","uikit.min"]
+

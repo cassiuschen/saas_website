@@ -15,8 +15,17 @@ def printfooter
 	puts '<div class="tm-footer"><div class="uk-container uk-container-center uk-text-center"><ul class="uk-subnav uk-subnav-line"><li><a href="mirrors.html">开源镜像站</a></li><li><a href="dev.html">开发者测试平台</a></li><li><a href="https://github.com/cassiuschen/saas_website/blob/master/log/CHANGELOG.md">服务日志</a></li><li><a href="http://cloud.thecmw.cn">创媒云端</a></li></ul><div class="uk-panel"><p>维护团队 <a href="http://thecmw.cn/">创意媒体工作室</a> 网络技术中心.<br class="uk-hidden-small">开放平台本着服务社区的原则运转，请自觉维护公共环境.</p><a href="index.html"><img src="./svg/logo_uikit.svg" width="90" height="30" title="创媒云端SaaS" alt="创媒云端SaaS"></a></div></div></div></body></html>'
 end
 
-def printtitle
-	puts '<title>', $website_info["title"] , '</title>'
+def printtitle(page)
+	case page
+	when "index"
+		puts '<title>', $website_info["title"] , '</title>'
+	when "mirrors"
+		puts '<title>开源镜像站 | ', $website_info["title"] , '</title>'
+	when "dev"
+		puts '<title>开发者中心 | ', $website_info["title"] , '</title>'
+	else
+		puts '<title>', $website_info["title"] , '</title>'
+	end
 end
 
 def linkcss
@@ -33,22 +42,26 @@ end
 
 
 #Ruby Script For SaaS Website
-def printheader
+def printheader(page)
 	puts '<!DOCTYPE html><html>'
 	puts '<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-	printtitle
+	printtitle(page)
 	linkcss
 	linkjs
 	puts '</head>'
 end
 
-def printnavbar
+def printnavbar(page)
 	navbartip = Array.new()
 	puts '<nav class="tm-navbar uk-navbar uk-navbar-attached"><div class="uk-container uk-container-center"><a class="uk-navbar-brand uk-hidden-small" href="', $file_url["index"], '"><img class="uk-margin uk-margin-remove" src="../svg/logo_uikit.svg" width="90" height="30" title="SaaS" alt="SaaS"></a>'
 	puts '<ul class="uk-navbar-nav uk-hidden-small">'
 	navbartip = $nav_info.keys
 	navbartip.each {|key|
-		puts '<li><a href="', $nav_info["key"], '">', key , '</a></li>'
+		if key == page
+			puts '<li class="uk-active"><a href="', $nav_info["key"], '">', key , '</a></li>'
+		else
+			puts '<li><a href="', $nav_info["key"], '">', key , '</a></li>'
+		end
 	}
 	puts '</ul>','<a href="#tm-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a><div class="uk-navbar-brand uk-navbar-center uk-visible-small"><img src="', $file_url["svgroot"],'/logo_uikit.svg" width="90" height="30" title="SaaS" alt="SaaS"></div></div></nav>'
 end
@@ -68,6 +81,11 @@ def printfooter
 	puts '<img src="',$file_url["svgroot"],'logo_uikit.svg" width="90" height="30" title="创媒云端SaaS" alt="创媒云端SaaS"></a></div></div></div>'
 end
 
-
-
-
+def printmobilenavbar(page)
+	puts '<div id="tm-offcanvas" class="uk-offcanvas"><div class="uk-offcanvas-bar"><ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{ multiple: true }"><li ><a href="#">SaaS | 来自 创媒云端</a></li><li class="uk-nav-header">SaaS服务</li><li class="uk-parent"><a href="',$file_url["mirrors"],'"><i class="uk-icon-wrench"></i> 镜像站</a>	<ul class="uk-nav-sub"><li><a href="',$file_url["mirrors"],'#ruby">RubyGems</a></li><li><a href="',$file_url["mirrors"],'#ubuntu">Ubuntu</a></li><li><a href="',$file_url["mirrors"],'#ubuntu">Debian</a></li></ul></li><li><a href="',$file_url["dev"],'"><i class="uk-icon-th-tasks"></i> 开发者中心</a></li><li class="uk-nav-header">已公布站点</li>'
+	mobbartip = $$saas_production.keys
+	mobbartip.each {|key|
+		puts '<li class="uk-parent"><a href="',$saas_production["key"],'">',key,'</a>'
+	}
+	puts '</ul></div></div>'
+end
