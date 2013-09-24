@@ -32,5 +32,5 @@ $website_info = {
 	"running_number" => "3"
 }
 
-$cssname = ["docs","highlight","style","uikit.docs.min"]
+$cssname = ["docs","highlight","uikit.docs.min"]
 $jsname = ["docs","highlight","jquery","uikit.min"]
