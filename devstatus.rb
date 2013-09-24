@@ -18,7 +18,6 @@ open("dev.txt"){|file|
 	while text = file.gets 
 		contain = text.split()
 		while input = contain.shift
-			puts input, "\n"
 			printtable(input)
 		end
 	end
