@@ -43,6 +43,7 @@ def printheader
 end
 
 def printnavbar
+	navbartip = Array.new()
 	puts '<nav class="tm-navbar uk-navbar uk-navbar-attached"><div class="uk-container uk-container-center"><a class="uk-navbar-brand uk-hidden-small" href="', $file_url["index"], '"><img class="uk-margin uk-margin-remove" src="../svg/logo_uikit.svg" width="90" height="30" title="SaaS" alt="SaaS"></a>'
 	puts '<ul class="uk-navbar-nav uk-hidden-small">'
 	navbartip = $nav_info.keys

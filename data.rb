@@ -22,9 +22,9 @@ $saas_production = {
 
 $website_info = {
 	"title" => "SaaS",
-	"jsroot" => "../js",
-	"cssroot" => "../css",
-	"svgroot" => "../svg",
+	"jsroot" => "../js/",
+	"cssroot" => "../css/",
+	"svgroot" => "../svg/",
 	"building_number" => "7",
 	"running_number" => "3"
 }
