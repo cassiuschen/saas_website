@@ -97,16 +97,16 @@ def printarticlesidebar(section)
 	open("article.txt"){|file|
 	while text = file.gets 
 		contain = text.split()
-		if contain.shift ~= "h1"
+		if contain[0] == "h1"
 			puts '<li class="uk-nav-header">#{contain.pop}</li>'
-		elsif contain.shift ~= "h2"
+		elsif contain[0] == "h2"
 			case contain.last
 			when "#{section}"
 				puts '<li class="uk-active">'
 			else
 				puts '<li>'
 			end
-			puts '<a href="#{$article_root[contain.last]}.html">contain.pop</a></li>'
+			puts '<a href="',$article_root[contain.last],'.html">contain.pop</a></li>'
 		end
 	end
 	}

@@ -1,3 +1,4 @@
 #test
-
-printarticlesidebar(Ubuntu)
+require "./data.rb"
+require "./printhtml.rb"
+printarticlesidebar("Ubuntu")
