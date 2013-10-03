@@ -39,15 +39,15 @@ $jsname = ["highlight","jquery","uikit.min","docs"]
 $running_pro = $saas_production.size.to_s
 
 $article_root = {
-	"Ubuntu" => "mirrors?ubuntu",
-	"Debian" => "mirrors?debian",
-	"RubyGems" => "mirrors?rubygems"
+	"Ubuntu" => "mirrors-ubuntu",
+	"Debian" => "mirrors-debian",
+	"RubyGems" => "mirrors-rubygems"
 }
 
 $page_root = {
 	"index" => "index",
-	"ubuntu" => "mirrors?ubuntu",
-	"debian" => "mirrors?debian",
-	"rubygems" => "mirrors?rubygems"
+	"ubuntu" => "mirrors-ubuntu",
+	"debian" => "mirrors-debian",
+	"rubygems" => "mirrors-rubygems"
 }
 

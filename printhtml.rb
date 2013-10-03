@@ -106,7 +106,7 @@ def printarticlesidebar(section)
 			else
 				puts '<li>'
 			end
-			puts '<a href="',$article_root[contain.last],'.html">contain.pop</a></li>'
+			puts '<a href="',$article_root[contain.last],'.html">',contain.pop,'</a></li>'
 		end
 	end
 	}
@@ -119,7 +119,12 @@ def printarticlesection(section)
 	open("#{section}.cc"){|file|
 	while text = file.gets 
 		contain = text.split()
-		type = "<#{contain[0]}>"
+		case contain[0]
+		when h3
+			type = "<#{contain[0]} class="tm-article-subtitle">"
+		else
+			type = "<#{contain[0]}>"
+		end
 		arctype = "</#{contain[0]}>"
 		contain[0] = type
 		contain << arctype
