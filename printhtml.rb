@@ -113,3 +113,24 @@ def printarticlesidebar(section)
 	puts '</ul></dev>'
 end
 
+def printarticlesection(section)
+	puts '<div class="tm-main uk-width-medium-3-4"><article class="uk-article">'
+	contain = Array.new()	
+	open("#{section}.cc"){|file|
+	while text = file.gets 
+		contain = text.split()
+		type = "<#{contain[0]}>"
+		arctype = "</#{contain[0]}>"
+		contain[0] = type
+		contain.push = arctype
+		while export = contain.shift
+			puts export
+		end
+	end
+	}
+end
+
+def printarticle(section)
+	printarticlesidebar(section)
+	printarticlesection(section)
+end
