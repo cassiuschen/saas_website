@@ -122,12 +122,13 @@ def printarticlesection(section)
 		type = "<#{contain[0]}>"
 		arctype = "</#{contain[0]}>"
 		contain[0] = type
-		contain.push = arctype
+		contain << arctype
 		while export = contain.shift
 			puts export
 		end
 	end
 	}
+	puts '</article></div>'
 end
 
 def printarticle(section)
