@@ -60,7 +60,7 @@ def printnavbar(page)
 		if key == page
 			puts '<li class="uk-active"><a href="', $nav_info["key"], '">', key , '</a></li>'
 		else
-			puts '<li><a href="', $nav_info["key"], '">', key , '</a></li>'
+			puts '<li><a href="', $nav_info[key], '">', key , '</a></li>'
 		end
 	}
 	puts '</ul>','<a href="#tm-offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a><div class="uk-navbar-brand uk-navbar-center uk-visible-small"><img src="', $file_url["svgroot"],'/logo_uikit.svg" width="90" height="30" title="SaaS" alt="SaaS"></div></div></nav>'
@@ -75,7 +75,7 @@ def printfooter
 	footertip = Array.new()
 	footertip = $nav_info.keys
 	footertip.each {|key|
-		puts '<li><a href="', $nav_info["key"], '">', key , '</a></li>'
+		puts '<li><a href="', $nav_info[key], '">', key , '</a></li>'
 	}
 	puts '</ul><div class="uk-panel"><p>维护团队 <a href="http://thecmw.cn/">创意媒体工作室</a> 网络技术中心.<br class="uk-hidden-small">开放平台本着服务社区的原则运转，请自觉维护公共环境.</p><a href="index.html">'
 	puts '<img src="',$file_url["svgroot"],'logo_uikit.svg" width="90" height="30" title="创媒云端SaaS" alt="创媒云端SaaS"></a></div></div></div>'
@@ -83,9 +83,9 @@ end
 
 def printmobilenavbar(page)
 	puts '<div id="tm-offcanvas" class="uk-offcanvas"><div class="uk-offcanvas-bar"><ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{ multiple: true }"><li ><a href="#">SaaS | 来自 创媒云端</a></li><li class="uk-nav-header">SaaS服务</li><li class="uk-parent"><a href="',$file_url["mirrors"],'"><i class="uk-icon-wrench"></i> 镜像站</a>	<ul class="uk-nav-sub"><li><a href="',$file_url["mirrors"],'#ruby">RubyGems</a></li><li><a href="',$file_url["mirrors"],'#ubuntu">Ubuntu</a></li><li><a href="',$file_url["mirrors"],'#ubuntu">Debian</a></li></ul></li><li><a href="',$file_url["dev"],'"><i class="uk-icon-th-tasks"></i> 开发者中心</a></li><li class="uk-nav-header">已公布站点</li>'
-	mobbartip = $$saas_production.keys
+	mobbartip = $saas_production.keys
 	mobbartip.each {|key|
-		puts '<li class="uk-parent"><a href="',$saas_production["key"],'">',key,'</a>'
+		puts '<li><a href="', $saas_production[key], '">', key ,'</a>'
 	}
 	puts '</ul></div></div>'
 end
