@@ -44,3 +44,10 @@ $article_root = {
 	"RubyGems" => "mirrors?rubygems"
 }
 
+$page_root = {
+	"index" => "index",
+	"ubuntu" => "mirrors?ubuntu",
+	"debian" => "mirrors?debian",
+	"rubygems" => "mirrors?rubygems"
+}
+
