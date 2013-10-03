@@ -20,7 +20,8 @@ $nav_info = {
 $saas_production = {
 	"北附人BDFZer" => "http://bdfzer.com",
 	"水楼Dev" => "http://chat.saas.bdfzer.com",
-	"北大附中传媒节网站" => "http://media.pkuschool.edu.cn"
+	"北大附中传媒节网站" => "http://media.pkuschool.edu.cn",
+	"Writings" => "http://Writings.bdfzer.com"
 }
 
 $website_info = {
@@ -28,10 +29,18 @@ $website_info = {
 	"jsroot" => "../js/",
 	"cssroot" => "../css/",
 	"svgroot" => "../svg/",
-	"building_number" => "7",
-	"running_number" => "3"
+	"building_number" => "8",
+	"running_number" => $running_pro
 }
 
 $cssname = ["uikit.docs.min","docs","highlight",]
-$jsname = ["highlight","jquery","uikit.min"]
+$jsname = ["highlight","jquery","uikit.min","docs"]
+
+$running_pro = $saas_production.size.to_s
+
+$article_root = {
+	"Ubuntu" => "mirrors?ubuntu",
+	"Debian" => "mirrors?debian",
+	"RubyGems" => "mirrors?rubygems"
+}
 

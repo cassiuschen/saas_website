@@ -14,6 +14,15 @@ puts '</body>'
 puts '</html>'
 
 
+#Install mirrors.html
+printheader("mirrors")
+puts '<body class="tm-background">'
+printnavbar("mirrors")
+
+printfooter
+printmobilenavbar("mirrors")
+puts '</body>'
+puts '</html>'
 
 
 #Install dev.html

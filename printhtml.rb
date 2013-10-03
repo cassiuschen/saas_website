@@ -89,3 +89,27 @@ def printmobilenavbar(page)
 	}
 	puts '</ul></div></div>'
 end
+
+def printarticlesidebar(section)
+	puts '<div class="tm-middle"><div class="uk-container uk-container-center"><div class="uk-grid" data-uk-grid-margin><div class="tm-sidebar uk-width-medium-1-4 uk-hidden-small"><ul class="tm-nav uk-nav" data-uk-nav>'
+	#read article
+	contain = Array.new()
+	open("article.txt"){|file|
+	while text = file.gets 
+		contain = text.split()
+		if contain.shift ~= "h1"
+			puts '<li class="uk-nav-header">#{contain.pop}</li>'
+		elsif contain.shift ~= "h2"
+			case contain.last
+			when "#{section}"
+				puts '<li class="uk-active">'
+			else
+				puts '<li>'
+			end
+			puts '<a href="#{$article_root[contain.last]}.html">contain.pop</a></li>'
+		end
+	end
+	}
+	puts '</ul></dev>'
+end
+
