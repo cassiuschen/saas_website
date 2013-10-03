@@ -110,7 +110,7 @@ def printarticlesidebar(section)
 		end
 	end
 	}
-	puts '</ul></dev>'
+	puts '</ul></div>'
 end
 
 def printarticlesection(section)
