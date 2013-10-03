@@ -1,6 +1,6 @@
 require "./data.rb"
 puts "echo 'this is autoinstall by RubyScrip'"
-puts 'rm -v update.sh'
+#puts 'rm -v update.sh'
 pages = ["index","ubuntu"]
 pages.each {|page|
 	puts "rm -v #{page}.html"	

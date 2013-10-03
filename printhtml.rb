@@ -120,8 +120,8 @@ def printarticlesection(section)
 	while text = file.gets 
 		contain = text.split()
 		case contain[0]
-		when h3
-			type = "<#{contain[0]} class="tm-article-subtitle">"
+		when "h3"
+			type = '<h3 class="tm-article-subtitle">'
 		else
 			type = "<#{contain[0]}>"
 		end
