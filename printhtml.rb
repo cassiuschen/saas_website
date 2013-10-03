@@ -98,7 +98,7 @@ def printarticlesidebar(section)
 	while text = file.gets 
 		contain = text.split()
 		if contain[0] == "h1"
-			puts '<li class="uk-nav-header">#{contain.pop}</li>'
+			puts '<li class="uk-nav-header">', contain.pop ,'</li>'
 		elsif contain[0] == "h2"
 			case contain.last
 			when "#{section}"
