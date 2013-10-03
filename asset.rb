@@ -1,37 +1,12 @@
-#Load
-require "./data.rb"
-require "./printhtml.rb"
+puts "echo 'this is autoinstall by RubyScrip'"
+puts 'rm -v update.sh'
+pages = ["index","ubuntu"]
+pages.each {|page|
+	puts "rm -v #{page}.html"	
+}
+puts "git pull"
+pages.each {|page|
+	puts "ruby #{page}.rb > #{page}.html"
+}
+puts "service nginx restart"
 
-#Install index.html
-
-printheader("index")
-puts '<body class="tm-background">'
-printnavbar("index")
-print_index_body
-printfooter
-printmobilenavbar("index")
-puts '</body>'
-puts '</html>'
-
-
-#Install mirrors.html
-printheader("mirrors")
-puts '<body class="tm-background">'
-printnavbar("mirrors")
-printarticle("Ubuntu")
-printfooter
-printmobilenavbar("mirrors")
-puts '</body>'
-puts '</html>'
-
-
-#Install dev.html
-#contain = Array.new()
-#open("dev.txt"){|file|
-#	while text = file.gets 
-#		contain = text.split()
-#		while input = contain.shift
-#			printtable(input)
-#		end
-#	end
-#}
