@@ -122,10 +122,23 @@ def printarticlesection(section)
 		case contain[0]
 		when "h3"
 			type = '<h3 class="tm-article-subtitle">'
+			arctype = '</h3>'
+		when "div-info"
+			type = '<div class="uk-alert uk-alert-success"><a href="" class="uk-alert-close uk-close"></a><p>'
+			arctype = '</p></div>'
+		when "hr"
+			type = "<hr>"
+			arctype = " "
+		when "block"
+			type = '<pre>'
+			arctype = " "
+		when "endblock"
+			type = "</pre>"
+			arctype = " "
 		else
 			type = "<#{contain[0]}>"
+			arctype = "</#{contain[0]}>"
 		end
-		arctype = "</#{contain[0]}>"
 		contain[0] = type
 		contain << arctype
 		while export = contain.shift
@@ -139,4 +152,5 @@ end
 def printarticle(section)
 	printarticlesidebar(section)
 	printarticlesection(section)
+	puts "</div>"
 end
