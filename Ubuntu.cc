@@ -1,4 +1,5 @@
 h1 开源镜像站
+hr
 h2 Ubuntu
 h3 收录架构
 li i386
