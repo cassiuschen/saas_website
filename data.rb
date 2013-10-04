@@ -26,11 +26,11 @@ $saas_production = {
 
 $website_info = {
 	"title" => "SaaS",
-	"jsroot" => "../js/",
-	"cssroot" => "../css/",
-	"svgroot" => "../svg/",
+	"jsroot" => "./js/",
+	"cssroot" => "./css/",
+	"svgroot" => "./svg/",
 	"building_number" => "8",
-	"running_number" => $running_pro.to_s
+	"running_number" => $running_pro
 }
 
 $cssname = ["uikit.docs.min","docs","highlight",]
