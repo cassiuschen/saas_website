@@ -30,22 +30,24 @@ $website_info = {
 	"cssroot" => "../css/",
 	"svgroot" => "../svg/",
 	"building_number" => "8",
-	"running_number" => $running_pro
+	"running_number" => $running_pro.to_s
 }
 
 $cssname = ["uikit.docs.min","docs","highlight",]
 $jsname = ["highlight","jquery","uikit.min","docs"]
 
-$running_pro = $saas_production.size.to_s
+$running_pro = $saas_production.size
 
 $article_root = {
 	"Ubuntu" => "mirrors-ubuntu",
 	"Debian" => "mirrors-debian",
-	"RubyGems" => "mirrors-rubygems"
+	"RubyGems" => "mirrors-rubygems",
+	"mirrors" => "mirrors"
 }
 
 $page_root = {
 	"index" => "index",
+	"mirrors" => "mirrors",
 	"ubuntu" => "mirrors-ubuntu",
 	"debian" => "mirrors-debian",
 	"rubygems" => "mirrors-rubygems"

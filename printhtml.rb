@@ -130,10 +130,13 @@ def printarticlesection(section)
 			type = "<hr>"
 			arctype = " "
 		when "block"
-			type = '<pre>'
+			type = '<pre><code>'
 			arctype = " "
 		when "endblock"
-			type = "</pre>"
+			type = "</code></pre>"
+			arctype = " "
+		when ">"
+			type = " "
 			arctype = " "
 		else
 			type = "<#{contain[0]}>"

@@ -11,7 +11,7 @@ p 每天凌晨 1:00
 hr
 h2 使用说明
 p 编辑/etc/apt/sources.list文件, 在文件最前面添加以下条目(操作前请做好相应备份)
-block
+
 code deb http://mirrors.thecmw.cn/ubuntu/ precise main restricted universe multiverse
 code deb http://mirrors.thecmw.cn/ubuntu/ precise-security main restricted universe multiverse
 code deb http://mirrors.thecmw.cn/ubuntu/ precise-updates main restricted universe multiverse
@@ -22,4 +22,4 @@ code deb-src http://mirrors.thecmw.cn/ubuntu/ precise-security main restricted u
 code deb-src http://mirrors.thecmw.cn/ubuntu/ precise-updates main restricted universe multiverse
 code deb-src http://mirrors.thecmw.cn/ubuntu/ precise-proposed main restricted universe multiverse
 code deb-src http://mirrors.thecmw.cn/ubuntu/ precise-backports main restricted universe multiverse
-endblock
+

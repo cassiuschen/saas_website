@@ -6,7 +6,7 @@ require "./printhtml.rb"
 printheader("mirrors")
 puts '<body class="tm-background">'
 printnavbar("开源镜像站")
-printarticle("Ubuntu")
+printarticle("mirrors")
 puts '</div></div>'
 printfooter
 printmobilenavbar("开源镜像站")
