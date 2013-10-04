@@ -1,7 +1,7 @@
 h1 开源镜像站
 h2 Ubuntu
 h2 Debian
-h3 RubyGems
+h2 RubyGems
 h1 开发者中心
 h2 部署状态
 h2 服务说明
