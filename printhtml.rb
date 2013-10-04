@@ -138,6 +138,11 @@ def printarticlesection(section)
 			type = "</code></pre>"
 			arctype = " "
 			$block = 0
+		if $block == 1
+			lastnum = contain.size - 1
+			contain.slice!(1..lastnum)
+			type = text
+			arctype = nil
 		#when ">"
 		#	type = " "
 		#	arctype = " "
@@ -152,13 +157,8 @@ def printarticlesection(section)
 			type = "<#{contain[0]}>"
 			arctype = "</#{contain[0]}>"
 		end
-		if $block == 1
-			lastnum = contain.size - 1
-			contain[0..lastnum] = text
-		else
-			contain[0] = type
-			contain << arctype
-		end
+		contain[0] = type
+		contain << arctype
 		while export = contain.shift
 			puts export
 		end
