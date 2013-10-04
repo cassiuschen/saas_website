@@ -138,7 +138,7 @@ def printarticlesection(section)
 			type = "</code></pre>"
 			arctype = " "
 			$block = 0
-		if $block == 1
+		elseif $block == 1
 			lastnum = contain.size - 1
 			contain.slice!(1..lastnum)
 			type = text
