@@ -8,17 +8,17 @@ hr
 h2 如何使用？
 h3 Gem-Install
 block
-> $ gem sources --remove https://rubygems.org/
-> $ gem sources -a http://ruby.taobao.org/ 
-> $ gem sources -l
-> *** CURRENT SOURCES ***
-> http://ruby.taobao.org
-> # 请确保只有 ruby.taobao.org
-> $ gem install rails
+$ gem sources --remove https://rubygems.org/
+$ gem sources -a http://ruby.taobao.org/ 
+$ gem sources -l
+*** CURRENT SOURCES ***
+http://ruby.taobao.org
+# 请确保只有 ruby.taobao.org
+$ gem install rails
 endblock
 h3 如果你是用 Bundle (Rails 项目)
 block
-> source 'http://ruby.taobao.org/'
-> gem 'rails', '3.2.12'
-> ...
+source 'http://ruby.taobao.org/'
+gem 'rails', '3.2.12'
+...
 endblock

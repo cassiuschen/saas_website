@@ -1,3 +1,4 @@
+$block = 0
 def printtable(element)
 	case element
 	when "T","t","ok","running","true"
@@ -132,18 +133,32 @@ def printarticlesection(section)
 		when "block"
 			type = '<pre><code>'
 			arctype = " "
+			$block = 1
 		when "endblock"
 			type = "</code></pre>"
 			arctype = " "
-		when ">"
-			type = " "
-			arctype = " "
+			$block = 0
+		#when ">"
+		#	type = " "
+		#	arctype = " "
+		#	lastnum = contain.size - 1
+			#output = contain[1..lastnum].to_s
+		#	output = text
+		#	contain[1..lastnum] = output
+		#elseif $block? == true
+		#	lastnum = contain.size - 1
+		#	contain[0..lastnum] = text
 		else
 			type = "<#{contain[0]}>"
 			arctype = "</#{contain[0]}>"
 		end
-		contain[0] = type
-		contain << arctype
+		if $block == 1
+			lastnum = contain.size - 1
+			contain[0..lastnum] = text
+		else
+			contain[0] = type
+			contain << arctype
+		end
 		while export = contain.shift
 			puts export
 		end
