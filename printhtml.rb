@@ -142,7 +142,7 @@ def printarticlesection(section)
 			lastnum = contain.size - 1
 			contain.slice!(1..lastnum)
 			type = text
-			arctype = nil
+			arctype = " "
 		#when ">"
 		#	type = " "
 		#	arctype = " "
