@@ -83,7 +83,7 @@ def printfooter
 end
 
 def printmobilenavbar(page)
-	puts '<div id="tm-offcanvas" class="uk-offcanvas"><div class="uk-offcanvas-bar"><ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{ multiple: true }"><li ><a href="#">SaaS | 来自 创媒云端</a></li><li class="uk-nav-header">SaaS服务</li><li class="uk-parent"><a href="#"><i class="uk-icon-wrench"></i> 开源镜像站</a>	<ul class="uk-nav-sub"><li><a href="./mirrors-rubygems.html">RubyGems</a></li><li><a href="./mirrors-ubuntu.html">Ubuntu</a></li><li><a href="./mirrors-debian.html">Debian</a></li></ul></li><li><a href="', $file_root["dev"] ,'"><i class="uk-icon-th-tasks"></i> 开发者中心</a><file_root["ass="uk-nav-header">已公布站点</li>'
+	puts '<div id="tm-offcanvas" class="uk-offcanvas"><div class="uk-offcanvas-bar"><ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{ multiple: true }"><li ><a href="#">SaaS | 来自 创媒云端</a></li><li class="uk-nav-header">SaaS服务</li><li class="uk-parent"><a href="#"><i class="uk-icon-wrench"></i> 开源镜像站</a>	<ul class="uk-nav-sub"><li><a href="./mirrors-rubygems.html">RubyGems</a></li><li><a href="./mirrors-ubuntu.html">Ubuntu</a></li><li><a href="./mirrors-debian.html">Debian</a></li></ul></li><li><a href="./dev.html"><i class="uk-icon-th-tasks"></i> 开发者中心</a><file_root["ass="uk-nav-header">已公布站点</li>'
 	mobbartip = $saas_production.keys
 	mobbartip.each {|key|
 		puts '<li><a href="', $saas_production[key], '">', key ,'</a>'
