@@ -155,7 +155,7 @@ def printarticlesection(section)
 				contain.slice!(1..lastnum)
 				type = text
 				arctype = " "
-				break
+				next
 			end
 			type = "<#{contain[0]}>"
 			arctype = "</#{contain[0]}>"
