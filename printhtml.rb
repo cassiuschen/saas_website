@@ -129,19 +129,19 @@ def printarticlesection(section)
 			arctype = '</p></div>'
 		when "hr"
 			type = "<hr>"
-			arctype = " "
+			arctype = ""
 		when "block"
 			type = '<pre><code>'
-			arctype = " "
+			arctype = ""
 			$block = 1
 		when "endblock"
 			type = "</code></pre>"
-			arctype = " "
+			arctype = ""
 			$block = 0
 		
 		#when ">"
-		#	type = " "
-		#	arctype = " "
+		#	type = ""
+		#	arctype = ""
 		#	lastnum = contain.size - 1
 			#output = contain[1..lastnum].to_s
 		#	output = text
@@ -154,7 +154,7 @@ def printarticlesection(section)
 				lastnum = contain.size - 1
 				contain.slice!(1..lastnum)
 				type = text
-				arctype = " "
+				arctype = ""
 				puts text
 				next
 			end
