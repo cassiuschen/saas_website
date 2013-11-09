@@ -5,13 +5,14 @@ require 'config/site_info'
 
 
 class App < Sinatra::Base
-	#Configration
+    #  Configration
     set :public_folder, File.dirname(__FILE__) + '/public'
+    set :views, settings.root + '/views'
 
 
-    #Route Info
+    #  Route Info
     get '/' do
-    	slim :index , :layout => :application
+    	slim :index
     end
 
 end
